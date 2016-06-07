@@ -15,5 +15,5 @@ RUN adduser --system --disabled-password --disabled-login mosquitto && \
 # 9001 websockets not configured
 EXPOSE 1883 9001
 
-ENTRYPOINT ["/usr/sbin/mosquitto"]
+ENTRYPOINT ["/usr/sbin/mosquitto", "-c", "/etc/mosquitto/mosquitto.conf"]
 
